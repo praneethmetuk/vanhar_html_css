@@ -10,6 +10,7 @@
   --slantedText: "Grand Hotel", cursive;
   --primaryColor: #3066be;
   --secondColor: #ff521b;
+  --thirdColor: #660404;
   --mainDark: #3a3e3b;
   --mainWhite: #fff;
   --mainGrey: #e5e5e5;
@@ -24,3 +25,86 @@ body {
 /* h1 {
   font-family: var(--slantedText);
 } */
+
+/* helper/utility class */
+a {
+  text-decoration: none;
+}
+.text-white {
+  color: var(--mainWhite);
+}
+.text-center {
+  text-align: center;
+}
+.text-primary {
+  color: var(--primaryColor);
+}
+/* clear fix */
+/* globals */
+/* navbar */
+
+/* header */
+.header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.99), rgba(15, 1, 78, 0.55)),
+    url("./images/main-bcg.jpg") center/cover no-repeat fixed;
+  position: relative;
+}
+/* end header */
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  letter-spacing: var(--letterSpacing);
+}
+
+.banner-subtitle {
+  font-size: 3.7rem;
+  font-family: var(--slantedText);
+  color: var(--primaryColor);
+  font-weight: bold;
+}
+
+.vanhar-text {
+  color: var(--secondColor);
+}
+
+.banner-title {
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  color: var(--mainWhite);
+  margin-top: 2.1rem;
+  line-height: 140%;
+  /* animation */
+}
+
+.main-btn,
+.banner-btn {
+  display: inline-block;
+  background: var(--secondColor);
+  /* margin: 5%; */
+  padding: 0.8rem 1.2rem;
+  text-transform: uppercase;
+  color: var(--mainDark);
+  font-weight: bold;
+  outline: 0.2rem solid var(--primaryColor);
+  outline-offset: 4px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.main-btn:hover,
+.banner-btn:hover {
+  color: var(--mainGrey);
+  opacity: 0.85;
+  transition: var(--mainTransition);
+}
+
+.vanhar-text:hover {
+  color: var(--mainGrey);
+  transition: var(--mainTransition);
+  cursor: -webkit-zoom-out;
+}
