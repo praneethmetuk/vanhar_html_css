@@ -66,6 +66,7 @@ a {
   font-family: var(--slantedText);
   color: var(--primaryColor);
   font-weight: bold;
+  animation: slideFromRight 5s ease-in-out 1;
 }
 
 .vanhar-text {
@@ -78,7 +79,7 @@ a {
   color: var(--mainWhite);
   margin-top: 2.1rem;
   line-height: 140%;
-  /* animation */
+  animation: slideFromLeft 5s ease-in-out 1;
 }
 
 .main-btn,
@@ -107,4 +108,163 @@ a {
   color: var(--mainGrey);
   transition: var(--mainTransition);
   cursor: -webkit-zoom-out;
+}
+.vanhar-text {
+  animation: flash 2s ease-in-out 2;
+}
+
+.banner-btn {
+  padding: 1.2rem 1.5rem;
+  animation: show 3s ease-in-out 1;
+}
+
+/* end header */
+
+/* animation */
+@keyframes show {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translate(1000px);
+  }
+  50% {
+    transform: translate(-200px);
+  }
+  75% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translate(-1000px);
+  }
+  50% {
+    transform: translate(200px);
+  }
+  75% {
+    transform: translate(-50px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+/* content divider */
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--secondColor),
+    var(--primaryColor)
+  );
+}
+/* end of content divider */
+
+/* section */
+.section {
+  background: var(--mainGrey);
+}
+.section {
+  padding: 2rem 0;
+  text-align: center;
+  transition: var(--mainTransition);
+}
+.section-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.4rem;
+  transition: var(--mainTransition);
+  display: inline-block;
+}
+.section-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  margin-bottom: 1.4rem;
+  color: var(--primaryColor);
+}
+.section-text {
+  max-width: 12rem;
+  display: inline-block;
+  text-align: center;
+}
+.section:hover {
+  background: var(--secondColor);
+}
+.section:hover .section-icon {
+  transform: translateY(3px);
+  /* animation: show 1s ease 1; */
+}
+.section:hover .section-title {
+  color: var(--mainGrey);
+}
+@media screen and (min-width: 500px) {
+  .section {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .section {
+    float: left;
+    width: 25%;
+  }
+}
+/* end of section */
+
+/* clear fix*/
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
 }
