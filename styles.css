@@ -268,3 +268,49 @@ a {
   clear: both;
   display: table;
 }
+
+/* about */
+.section-center {
+  padding: 4rem 0;
+  width: 80vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.about-picture-container {
+  width: 100%;
+  display: block;
+  /* background: var(--primaryColor); */
+  transition: var(--mainTransition);
+}
+.about-picture-container:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+.about-img,
+.about-info {
+  padding: 2rem;
+}
+.section-subtitle {
+  font-size: 2rem;
+  font-family: var(--slantedText);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+  color: var(--secondColor);
+}
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.about-text {
+  margin: 1rem 0;
+  max-width: 26rem;
+}
+@media screen and (min-width: 992px) {
+  .about-img,
+  .about-info {
+    float: left;
+    width: 50%;
+  }
+}
+/* end of about */
